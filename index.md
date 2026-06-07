@@ -23,15 +23,15 @@ Taizhong completed his Master’s degree at the Architectural Association Design
 - **2021 – 2023**  
   **Designer** &middot; *ZHA CODE, London*  
   Developed C++ zSpace core computational framework.
+- **2019 – 2021**  
+  **Designer & Researcher** &middot; *AI SpaceFactory*  
+  Developed advanced construction technologies for space exploration (Mars habitat structures) and smart buildings.
 - **2018**  
   **Research Residency** &middot; *Autodesk Build Space, Boston*  
   Conducted applied research on advanced fabrication techniques and human-machine collaboration.
 - **2018**  
   **Research Residency** &middot; *Odico A/S, Odense*  
   Researched robotic hot-wire cutting and mold fabrication for complex concrete geometry.
-- **2019 – 2021**  
-  **Designer & Researcher** &middot; *AI SpaceFactory*  
-  Developed advanced construction technologies for space exploration (Mars habitat structures) and smart buildings.
 
 ## Education
 
