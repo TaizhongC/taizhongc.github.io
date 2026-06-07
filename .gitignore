@@ -1,0 +1,15 @@
+# Jekyll files
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundler files
+.bundle/
+vendor/bundle/
+vendor/cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini

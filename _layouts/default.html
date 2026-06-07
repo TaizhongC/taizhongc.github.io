@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% seo %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <script>
+    // Immediate dark/light mode script to prevent flash of wrong theme
+    (function () {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else {
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', systemPrefersDark ? 'dark' : 'light');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <div class="site-container">
+    
+    <!-- Top Header -->
+    <header class="site-header">
+      <div class="header-name">
+        <a href="{{ '/' | relative_url }}">TAIZHONG CHEN</a>
+      </div>
+      <nav class="header-nav">
+        <a href="#profile">Profile</a>
+        <a href="#professional-experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#publications">Publications</a>
+        <a href="#talks--interviews">Talks</a>
+        <a href="#exhibitions">Exhibitions</a>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      {{ content }}
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col contact-info">
+          <div class="footer-label">CONTACT</div>
+          <div class="footer-links">
+            <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+            <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank">LinkedIn</a>
+            <a href="https://github.com/{{ site.github_username }}" target="_blank">GitHub</a>
+          </div>
+        </div>
+        
+        <div class="footer-col site-meta">
+          <div class="footer-label">THEME</div>
+          <button id="theme-toggle" class="theme-toggle-link" aria-label="Toggle dark/light theme">
+            <span class="theme-text-dark">[ Dark Mode ]</span>
+            <span class="theme-text-light">[ Light Mode ]</span>
+          </button>
+          <div class="copyright">
+            &copy; <span id="year"></span> Taizhong Chen
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    // Theme Toggle Functionality
+    const toggleButton = document.getElementById('theme-toggle');
+    toggleButton.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+
+    // Set Copyright Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

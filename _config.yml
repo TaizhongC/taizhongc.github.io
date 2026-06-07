@@ -1,3 +1,23 @@
-theme: jekyll-theme-minimal
-title: Octocat's homepage
-description: Bookmark this to keep an eye on my project updates!
+title: Taizhong Chen
+email: taizhong.chen@zaha-hadid.com
+description: "Senior Designer at Zaha Hadid Architects (CODE). Research interests in computational/architectural geometry, geometry processing, and digital/robotic fabrication."
+url: "https://taizhong.github.io"
+github_username: taizhongc
+linkedin_username: taizhong-chen
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sass-converter
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .bundle
+  - .git
+  - .github
+  - README.md
+  - ZHA CV Taizhong Chen 2025.pdf
